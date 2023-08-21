@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Categorias</h2>
+  <ul>
+    {% for categoria in categorias %}
+      <li>{{ categoria.nome }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'categoria_computador_create' %}">Adicionar Categoria de Computador</a>
+  <ul>
+    {% for categoria in categorias %}
+      <li>{{ categoria.nome }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'localizacao_create' %}">Adicionar localização</a>
+{% endblock %}
